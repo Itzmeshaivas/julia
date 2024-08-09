@@ -1,0 +1,56 @@
+function findlargest()
+	bignum=typemin(Int64)
+	for sum in eachline("input.txt")
+		num=parse(Int64,sum)
+		if num>bignum
+			bignum=num
+		end 
+	end
+	println("Largest is $bignum")
+end 
+findlarrgest()
+
+
+
+
+function findsmallest()
+	smallnum=typemax(Int64)
+	for snum in eachline("input.txt")
+		num=parse(Int64,snum)
+		if num<smallnum
+			smallnum=num
+		end 
+	end
+	println("Smallest if $smallnum")
+end
+findsmallest()
+
+
+
+
+
+
+
+
+function sumcountaverage()
+n=0
+sum=0
+print("enter a number:")
+while(snum=readline())!=" "
+n+=1
+sum+=parse(Int64,snum)
+print("enter a number")
+end
+if n==0
+println("\n no number entered")
+else
+println("\n$n number(s) entered)
+println(sum is $sum")
+println("averafe is $(round(sum/n,digits=1))")
+end
+end
+sumcountaverage()
+
+
+
+

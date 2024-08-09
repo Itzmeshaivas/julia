@@ -1,0 +1,43 @@
+using Linear Algebra
+function matrix properties(A)
+println("Matris")
+println(A)
+println()
+printing Determinant dett A1)
+println("Inverse")
+if isposdef(A)||isposdel(Hermitian(A))
+println(inv(A))
+else
+println("Matrix is not invertible") end
+println("")
+println("Rank", rank(A))
+println("Upper Triangular Matrix) 
+printin(upper_triangular(A))
+println("")
+println("Lower Triangular Matrix") 
+println(lower_triangular(A)) 
+println(" ")
+println("Diagonal Elements", diag(A))
+println("Euclidean Norm", norm(A))
+println("Square Root of Matrix ")
+println(sqrt(A))
+end
+function upper triangular(A)
+function upper_triangular(A)
+n=size(A,1)
+U=zeros(n,n,)
+for i in l:n j in i:n
+U[i,j]=A[i,j]
+end
+return U
+end
+function lower_triangular(A)
+n=size(A,l)
+L=zeros(n,n)
+for i in l:n,j in l:i
+L[i][j]=A[i,j]
+end
+return L
+end
+A=[1 2 3;4 5 6;7 8 9]
+matrix_properties(A)

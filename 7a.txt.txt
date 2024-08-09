@@ -1,0 +1,28 @@
+using Printf
+function tolowercase(ch::Char)
+if isleeter(ch)
+return lowercase(ch)
+end
+return 0
+end
+function letterfrequency(letterfreq::Dict,inn)
+while !eof(inn)
+ch=read(inn,Char)
+if(c=tolowercase(ch))!=0
+letterfreq[c]=get(letterfreq,c,0)+1
+end
+end
+end
+function main()
+inn=open("input.txt","r")
+out=open("output.txt","w")
+letterfreq=Dict{Char,Int64}()
+letterfreqency(letterfreq,inn)
+println(out,"letter frequency\n")
+for ch in sort(collect(keys(letterfreq)))
+@printf(out,"%4c%8d\n",ch,letterfreq[ch])
+end
+close(inn)
+close(out)
+end
+main()

@@ -1,0 +1,58 @@
+Maxcandidates=10
+using printf
+n=0
+while(name=readline(inn))!=" "
+if n<Maximumcandidates
+n+=1
+cand[n]=name
+else
+println("\n too many candidate")
+println("working with first $n)
+end
+end
+return n
+end
+function printresults(out,max,name,vote,valid,spoilt)
+println(out,"\number of voters:$(valid+spoilt)")
+println(out,"number of valid votes:$valid")
+println(out,"number of spoilt votes:$spoilt")
+println(out,"\n candidate score\n")
+for c=1":max
+@printf(out,"%-15s%3d\n",name[c],vote[c])
+end
+println(out,"\n the winner(s)")
+wint vote=maximum(vote)
+for c=1:max
+if(vote[c]==winvote)
+println(out,"$(name[c])")
+end
+end
+end
+function processvotes(inn,out,numcand,vote)
+validvotes=spoiltvotes=0
+while(line=readline(inn))!=" "
+num=[parse(Int,x) for x in spilt(line)]
+for v in num
+if v<1||v>numcand
+println(out,"invalid vote:$v")
+spoiltvotes+=1
+else
+vote[v]+=1
+validvotes+=1
+end
+end
+validvotes.spoiltvotes
+end
+function main()
+inn=open("votes.txt","r")
+out=open("result.txt","w")
+candidate=fill(" ",maxcandidates)
+numcand=getnames(inn,candidate)
+vote=fill(0,numcand)
+valid,spoilt=processvotes(inn,out,numcand,vote)
+printresult(out,numcand,cvandidate,vote,valid,spoilt)
+close(inn)
+close(out)
+end
+main()
+
