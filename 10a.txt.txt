@@ -1,6 +1,6 @@
-import pkg;
-pkg.add("plots")
-using plots
-x=1"10e4;
+import Pkg;
+Pkg.add("Plots")
+using Plots
+x=1:10e4;
 y=x.^2;
-plot(x,y)
+Plot(x,y)
