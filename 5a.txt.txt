@@ -1,5 +1,5 @@
- function letters Only Lower(phrase) -
-word=""
+ function lettersOnlyLower(phrase) -
+word=" "
  for ch in phrase 
  if isletter(ch) 
  word*= lowercase(ch) 
@@ -7,9 +7,9 @@ end
 end 
 return word
  end 
-function is Palindrome(phrase) 
-word=lettersOnly Lower(phrase)
-loo=1
+function isPalindrome(phrase) 
+word=lettersOnlyLower(phrase)
+lo=1
  hi = length(word) 
 while lo <hi 
 if word[lo] != word[hi] 
@@ -23,7 +23,7 @@ return true
 function main() 
 print("\nWord or phrase? (To stop. press Enter): ")
 phrs = readline()
-while phrs != ""
+while phrs != " "
 if isPalindrome(phrs)
 println("is a palindrome")
 else
