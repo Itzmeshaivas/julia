@@ -1,5 +1,5 @@
-import pkg;
-pkg.add("plots")
-using plots
+import Pkg;
+Pkg.add("Plots")
+using Plots
 eq(x)=sind(x)+sind(2x)
-plot(eq,1:500)
+Plot(eq,1:500)
