@@ -1,29 +1,29 @@
-function findlargest()
-	bignum=typemin(Int64)
+function findLargest()
+	bigNum=typemin(Int64)
 	for sum in eachline("input.txt")
 		num=parse(Int64,sum)
-		if num>bignum
-			bignum=num
+		if num>bigNum
+			bigNum=num
 		end 
 	end
-	println("Largest is $bignum")
+	println("Largest is $bigNum")
 end 
-findlarrgest()
+findLargest()
 
 
 
 
-function findsmallest()
-	smallnum=typemax(Int64)
+function findSmallest()
+	smallNum=typemax(Int64)
 	for snum in eachline("input.txt")
 		num=parse(Int64,snum)
-		if num<smallnum
-			smallnum=num
+		if num<smallNum
+			smallNum=num
 		end 
 	end
-	println("Smallest if $smallnum")
+	println("Smallest if $smallNum")
 end
-findsmallest()
+findSmallest()
 
 
 
@@ -32,7 +32,7 @@ findsmallest()
 
 
 
-function sumcountaverage()
+function sumCountAverage()
 n=0
 sum=0
 print("enter a number:")
@@ -45,11 +45,11 @@ if n==0
 println("\n no number entered")
 else
 println("\n$n number(s) entered)
-println(sum is $sum")
-println("averafe is $(round(sum/n,digits=1))")
+println(Sum is $sum")
+println("Averafe is $(round(sum/n,digits=1))")
 end
 end
-sumcountaverage()
+sumCountAverage()
 
 
 
