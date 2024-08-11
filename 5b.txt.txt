@@ -1,6 +1,6 @@
-function get Next Word(inn. IOStream) 
+function getNextWord(inn::IOStream) 
 ch=' '
-while !eof(inn) && isletter(ch)
+while !eof(inn) && !isletter(ch)
 ch=read(inn,Char)
  end 
 if eof(inn)
@@ -14,10 +14,10 @@ ch=read(inn,Char)
  end
  return wrd 
 end 
-function firstLast Word()
+function firstLastWord()
  inn=open("input.txt", "r")
  first="~"
- last=""
+ last=" "
  word=getNextWord(inn) 
 while word != nothing
  println(word)
@@ -33,4 +33,4 @@ close(inn)
 println("\nFirst word is $first")
  println("Last word is $last")
  end
-  first Last Word()
+  firstLastWord()
