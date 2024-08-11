@@ -13,6 +13,11 @@ findLargest()
 
 
 
+
+
+
+
+
 function findSmallest()
 	smallNum=typemax(Int64)
 	for snum in eachline("input.txt")
@@ -24,6 +29,10 @@ function findSmallest()
 	println("Smallest if $smallNum")
 end
 findSmallest()
+
+
+
+
 
 
 
