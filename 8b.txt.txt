@@ -1,14 +1,15 @@
 using Linear Algebra
-function matrix properties(A)
-println("Matris")
+function matrix_properties(A)
+println("Matrix")
 println(A)
 println()
-printing Determinant dett A1)
+println("Determinant", det(A)
 println("Inverse")
 if isposdef(A)||isposdel(Hermitian(A))
 println(inv(A))
 else
-println("Matrix is not invertible") end
+println("Matrix is not invertible") 
+end
 println("")
 println("Rank", rank(A))
 println("Upper Triangular Matrix) 
@@ -22,9 +23,8 @@ println("Euclidean Norm", norm(A))
 println("Square Root of Matrix ")
 println(sqrt(A))
 end
-function upper triangular(A)
 function upper_triangular(A)
-n=size(A,1)
+n=size(A,l)
 U=zeros(n,n,)
 for i in l:n j in i:n
 U[i,j]=A[i,j]
